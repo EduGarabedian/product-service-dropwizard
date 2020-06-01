@@ -24,3 +24,14 @@ IntelliJ
 `Product-DB-MySQL` - start application using MySQL Data Base.
 
 ![intelliJ](intellij-scripts.png)
+
+#### Como criar estas configurações no seu IntelliJ
+
+![intelliJ](tutorial/tutorial.001.jpeg)
+![intelliJ](tutorial/tutorial.002.jpeg)
+![intelliJ](tutorial/tutorial.003.jpeg)
+![intelliJ](tutorial/tutorial.004.jpeg)
+![intelliJ](tutorial/tutorial.005.jpeg)
+![intelliJ](tutorial/tutorial.006.jpeg)
+![intelliJ](tutorial/tutorial.007.jpeg)
+![intelliJ](tutorial/tutorial.008.jpeg)
