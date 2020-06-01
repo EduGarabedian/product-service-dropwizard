@@ -12,17 +12,23 @@ import org.jdbi.v3.core.Jdbi;
 
 public class ProductServiceApplication extends Application<ProductServiceConfiguration> {
 
-    public static void main(final String[] args) throws Exception {
+        public static void main ( final String[] args) throws Exception {
         new ProductServiceApplication().run(args);
+            try {
+                new Servidor().run(new String[]{"server"});
+            } catch (Exception ex) {
+                System.out.printf("Problema ao subir o servidor");
+                ex.printStackTrace();
+            }
     }
 
-    @Override
-    public String getName() {
+        @Override
+        public String getName () {
         return "ProductService";
     }
 
-    @Override
-    public void initialize(final Bootstrap<ProductServiceConfiguration> bootstrap) {
+        @Override
+        public void initialize ( final Bootstrap<ProductServiceConfiguration> bootstrap){
         bootstrap.addBundle(new MigrationsBundle<ProductServiceConfiguration>() {
             @Override
             public void run(ProductServiceConfiguration productServiceConfiguration, Environment environment) throws Exception {
@@ -40,9 +46,9 @@ public class ProductServiceApplication extends Application<ProductServiceConfigu
         });
     }
 
-    @Override
-    public void run(final ProductServiceConfiguration configuration,
-                    final Environment environment) {
+        @Override
+        public void run ( final ProductServiceConfiguration configuration,
+        final Environment environment){
 
         final JdbiFactory factory = new JdbiFactory();
         final Jdbi jdbi = factory.build(environment, configuration.getDataSourceFactory(), "h2");
@@ -54,6 +60,9 @@ public class ProductServiceApplication extends Application<ProductServiceConfigu
 
     }
 
+    }
 
 
-}
+
+
+

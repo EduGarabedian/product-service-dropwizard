@@ -18,6 +18,10 @@ public class ProductResource {
         this.productDao = productDao;
     }
 
+    public ProductResource() {
+
+    }
+
     @GET
     public Response getProducts() {
         List<Product> allProducts = productDao.getAllProducts();
